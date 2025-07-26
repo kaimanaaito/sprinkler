@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('sprinkler.jpg'), linear-gradient(to bottom right, rgba(232, 245, 233, 0.5), rgba(178, 223, 219, 0.5), rgba(128, 203, 196, 0.5), rgba(77, 182, 172, 0.5));
+    background-position: center 20%; 
+    background-size: cover; 
+    background-blend-mode: overlay; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.weather-section {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+}
+
+.toggle-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 0 10px 10px 0;
+}
+
+input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em; 
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.switch-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .switch-label {
+    background-color: #4caf50;
+}
+
+input:checked + .switch-label:before {
+    transform: translateX(26px);
+}
+
+#weather, #temperature, #humidity {
+    margin-top: 15px;
+    font-size: 1.8em; 
+}
+
+h1 {
+    font-size: 2.5em; 
+}

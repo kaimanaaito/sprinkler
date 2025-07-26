@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-section">
+            <h1>Weather Information</h1>
+            <input type="text" id="city" placeholder="Enter city name" />
+            <button id="getWeatherBtn">Get Weather</button>
+            <div id="weather"></div>
+            <div id="temperature"></div>
+            <div id="humidity"></div>
+        </div>
+        <div class="toggle-section">
+            <h2>Sprinkler Status</h2>
+            <label class="switch">
+                <input type="checkbox" id="sprinklerToggle" checked>
+                <span class="switch-label"></span>
+            </label>
+            <p id="toggle-status">Sprinkler is ON</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
